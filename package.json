@@ -10,7 +10,7 @@
   },
   "scripts": {
     "tokens": "npm run tokens:api && npm run tokens:build",
-    "tokens:api": "bin/figma-tokens",
+    "tokens:api": "node bin/figma-tokens",
     "tokens:build": "style-dictionary build",
     "storybook": "start-storybook -p 9001",
     "storybook:build": "build-storybook -o storybook -c .storybook",
@@ -76,10 +76,7 @@
   "eslintConfig": {
     "extends": [
       "./node_modules/@s-ui/lint/eslintrc.js"
-    ],
-    "env": {
-      "jest": true
-    }
+    ]
   },
   "prettier": "./node_modules/@s-ui/lint/.prettierrc.js",
   "stylelint": {
